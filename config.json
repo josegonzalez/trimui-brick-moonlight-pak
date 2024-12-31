@@ -1,0 +1,5 @@
+{
+    "label": "Moonlight",
+    "launch": "launch.sh",
+    "description": "Game streaming server via Moonlight"
+}
