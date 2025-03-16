@@ -1,5 +1,8 @@
 {
     "label": "Moonlight",
     "launch": "launch.sh",
-    "description": "Game streaming server via Moonlight"
+    "description": "Game streaming server via Moonlight",
+    "platforms": [
+        "tg5040"
+    ]
 }
