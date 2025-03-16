@@ -1,5 +1,4 @@
 #!/bin/sh
-set -eo pipefail
 PAK_DIR="$(dirname "$0")"
 PAK_NAME="$(basename "$PAK_DIR")"
 PAK_NAME="${PAK_NAME%.*}"
@@ -13,6 +12,14 @@ echo "$0" "$@"
 cd "$PAK_DIR" || exit 1
 mkdir -p "$USERDATA_PATH/$PAK_NAME"
 
-echo "1" >/tmp/stay_awake
-trap "rm -f /tmp/stay_awake" EXIT INT TERM HUP QUIT
-/usr/trimui/apps/moonlight/launch.sh
+cleanup() {
+    rm -f /tmp/stay_awake
+}
+
+main() {
+    echo "1" >/tmp/stay_awake
+    trap "cleanup" EXIT INT TERM HUP QUIT
+    /usr/trimui/apps/moonlight/launch.sh
+}
+
+main "$@"
