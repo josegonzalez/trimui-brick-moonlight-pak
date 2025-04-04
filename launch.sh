@@ -19,7 +19,11 @@ cleanup() {
 main() {
     echo "1" >/tmp/stay_awake
     trap "cleanup" EXIT INT TERM HUP QUIT
-    /usr/trimui/apps/moonlight/launch.sh
+
+    if [ -f /usr/trimui/apps/moonlight/launch.sh ]; then
+         chmod +x /usr/trimui/apps/moonlight/launch.sh
+         /usr/trimui/apps/moonlight/launch.sh
+    fi
 }
 
 main "$@"
