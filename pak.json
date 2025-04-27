@@ -3,7 +3,7 @@
   "type": "TOOL",
   "description": "Game streaming server via Moonlight",
   "author": "josegonzalez",
-  "repo_url": "https://github.com/josegonzalez/minui-moonlight-pak",
+  "repo_url": "https://github.com/josegonzalez/trimui-brick-moonlight-pak",
   "release_filename": "Moonlight.pak.zip",
   "platforms": [
     "tg5040"
