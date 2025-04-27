@@ -1,9 +1,0 @@
-{
-    "label": "Moonlight",
-    "launch": "launch.sh",
-    "description": "Game streaming server via Moonlight",
-    "pak_type": "tool",
-    "platforms": [
-        "tg5040"
-    ]
-}
